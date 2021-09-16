@@ -1,0 +1,36 @@
+mkdir -p /home/dkx/temp/Dockerimages
+mkdir -p /home/dkx/temp/Dockerimages/webof6
+cd webof6/
+
+touch index.html
+vim index.html
+
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>美食</title>
+</head>
+<body>
+   <br>
+   <h2 style="color:red">好吃的</h2>
+   <br>
+   <br>
+   <h3 align="center" style="color:blue">炸鸡</h3>
+   <h3 align="center" style="color:green">糖醋排骨</h3>
+   <h3 align="center" style="color:yellow">红烧肉</h3>
+   <h3 align="center" style="color:pink">羊肉串</h3>
+</body>
+
+docker build -t nginxpuyang:puyang2021 . 创建带有页面的镜像
+
+运行镜像成容器：docker run -d -p 80:80 nginxpuyang:puyang2021
+
+输入网址查看  ifconfig
+
+
+
+
+
+
+
